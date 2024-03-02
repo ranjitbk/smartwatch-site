@@ -1,0 +1,249 @@
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+%listreset,
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.d-block {
+  display: block;
+}
+.d-table {
+  display: table !important;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tb-flex {
+  @include media(">=tablet") {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.lg-flex {
+  @include media(">=desktop") {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.bg-img {
+  background-size: cover;
+  background-position: 50% 50%;
+
+  &.bg-contain {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+  }
+
+  &.bg-top {
+    background-position: 0 0;
+    background-size: 100% auto;
+  }
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-content-start {
+  align-content: flex-start;
+}
+.align-content-end {
+  align-content: flex-end;
+}
+.align-content-center {
+  align-content: center;
+}
+.align-content-between {
+  align-content: space-between;
+}
+.align-content-around {
+  align-content: space-around;
+}
+.align-self-auto {
+  align-self: auto;
+}
+.align-self-start {
+  align-self: flex-start;
+}
+.align-self-end {
+  align-self: flex-end;
+}
+.align-self-center {
+  align-self: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+
+.text-tb-left {
+  @include media(">=tablet") {
+    text-align: left;
+  }
+}
+.text-lg-left {
+  @include media(">=desktop") {
+    text-align: left;
+  }
+}
+
+.font-light {
+  font-weight: 300;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-heavy {
+  font-weight: 800;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semi-bold {
+  font-weight: 600;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+b {
+  font-weight: 600;
+}
+
+.sm-hidden {
+  @include media("<tablet") {
+    display: none;
+  }
+}
+
+.tb-hidden {
+  @include media(">=tablet") {
+    display: none;
+  }
+}
+
+.lg-hidden {
+  @include media(">=desktop") {
+    display: none;
+  }
+}
+.whole-link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+}
+
+
+.accordion {
+  .slide {
+    @include transition(height);
+    overflow: hidden;
+
+    &.hide {
+      height: 0;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+@import 'variables';
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?#{$icomoon-hash}') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'],
+%icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close {
+  &:before {
+    content: $icon-close; 
+  }
+}
+.icon-trash {
+  &:before {
+    content: $icon-trash; 
+  }
+}
+.icon-account {
+  &:before {
+    content: $icon-account; 
+  }
+}
+.icon-account-outline {
+  &:before {
+    content: $icon-account-outline; 
+  }
+}
+.icon-activity {
+  &:before {
+    content: $icon-activity; 
+  }
+}
+.icon-arrow-right-circle {
+  &:before {
+    content: $icon-arrow-right-circle; 
+  }
+}
+.icon-arrow-up-circle {
+  &:before {
+    content: $icon-arrow-up-circle; 
+  }
+}
+.icon-arrow-left-circle {
+  &:before {
+    content: $icon-arrow-left-circle; 
+  }
+}
+.icon-arrow-down-circle {
+  &:before {
+    content: $icon-arrow-down-circle; 
+  }
+}
+.icon-chevron-down {
+  &:before {
+    content: $icon-chevron-down; 
+  }
+}
+.icon-chevron-up {
+  &:before {
+    content: $icon-chevron-up; 
+  }
+}
+.icon-chevron-left {
+  &:before {
+    content: $icon-chevron-left; 
+  }
+}
+.icon-chevron-right {
+  &:before {
+    content: $icon-chevron-right; 
+  }
+}
+.icon-bundle-line {
+  &:before {
+    content: $icon-bundle-line; 
+  }
+}
+.icon-check {
+  &:before {
+    content: $icon-check; 
+  }
+}
+.icon-computer-solid {
+  &:before {
+    content: $icon-computer-solid; 
+  }
+}
+.icon-email {
+  &:before {
+    content: $icon-email; 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-factory {
+  &:before {
+    content: $icon-factory; 
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: $icon-linkedin; 
+  }
+}
+.icon-mobile-line {
+  &:before {
+    content: $icon-mobile-line; 
+  }
+}
+.icon-pin {
+  &:before {
+    content: $icon-pin; 
+  }
+}
+.icon-pin-long {
+  &:before {
+    content: $icon-pin-long; 
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
+.icon-send {
+  &:before {
+    content: $icon-send; 
+  }
+}
+.icon-cart {
+  &:before {
+    content: $icon-cart; 
+  }
+}
+.icon-world-line {
+  &:before {
+    content: $icon-world-line; 
+  }
+}
+

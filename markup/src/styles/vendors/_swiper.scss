@@ -1,0 +1,11 @@
+@import "swiper/swiper.scss";
+
+.slide {
+	outline: none;
+}
+
+.swiper-wrapper {
+	transition-timing-function: linear;
+	box-sizing: border-box;
+}
+

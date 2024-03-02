@@ -1,0 +1,48 @@
+
+/*!
+  Theme Name: Le Pass Digital
+  Author: Anonymous
+  Author URI:
+  Version: 1
+  Description: Le Pass Digital theme for Wordpress
+  License: GNU General Public License v2 or later
+  License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+  Text Domain: le pass digital
+  Tags: one-column, two-columns
+  Theme URI:
+*/
+
+// 1. Configuration and helpers
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// 2. Vendors: include media mixins and mormalize imported from node_modules
+@import '~include-media/dist/include-media';
+@import 'vendors/normalize';
+@import 'vendors/icomoon/styles';
+@import 'vendors/swiper';
+
+
+// 3. Base styles and elements
+@import 'base/base';
+@import 'base/helpers';
+@import 'base/fonts';
+@import 'base/wp-reset';
+@import 'base/typography';
+@import 'base/forms';
+
+// 4. Layout-related sections
+@import 'layout/header';
+@import 'layout/common';
+@import 'layout/footer';
+
+// 5. Components
+@import 'components/button';
+
+// 6. Page-specific styles
+@import 'pages/home';
+
+
+// 7. Themes
+// @import 'themes/themes';
