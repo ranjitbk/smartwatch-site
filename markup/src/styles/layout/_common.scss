@@ -28,3 +28,22 @@ body {
   }
 }
 
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include media(">=tablet") {
+    padding: 0 1.0417vw;
+    max-width: 75vw;
+  }
+}
+
+.site-section {
+  padding: 55px 0;
+
+  @include media('>=tablet') {
+    padding: 4.1667vw 0;
+  }
+}
+

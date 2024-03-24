@@ -171,6 +171,9 @@ img {
   text-transform: uppercase;
 }
 
+.text-white {
+  color: $white !important;
+}
 
 .text-tb-left {
   @include media(">=tablet") {

@@ -45,7 +45,7 @@ p {
   margin: 0 0 $paragraph-margin-bottom;
 
   @include media('>=tablet') {
-    margin-bottom: 1.0417vw;
+    margin-bottom: 1.3021vw;
   }
 
   &:last-child {
@@ -81,11 +81,11 @@ p {
     font-size: map-get($headings-sizes, $name);
     margin: 0 0 $headings-margin-bottom;
     line-height: $headings-line-height;
-    color: $white;
+    color: $purple;
 
     @include media(">=tablet") {
       font-size: map-get($headings-sizes-max, $name);
-      margin-bottom: 0.625vw;
+      margin-bottom: 1.8229vw;
     }
   }
 }

@@ -2,3 +2,74 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	background-color: $purple-one;
+	color: $white;
+	padding: 10px 32px;
+	font-size: 14px;
+	position: relative;
+	overflow: hidden;
+	z-index: 9;
+	text-align: center;
+
+	@include media('>=tablet') {
+		padding: 0.6944vw 2.2222vw;
+		font-size: 1.1111vw;
+	}
+
+	&:hover {
+		&:before,
+		&:after {
+			transform: none;
+		}
+
+		i {
+			color: $white;
+		}
+	}
+
+	i {
+		@include transition(color);
+		color: $yellow;
+		margin-right: 10px;
+	}
+
+	&:before,
+	&:after {
+		@include transition(transform);
+		position: absolute;
+		content: '';
+		top: 0;
+		bottom: 0;
+		background-color: $yellow;
+		width: 100%;
+		z-index: -1;
+	}
+
+	&:before {
+		left: 0;
+		transform: translateY(-100%) rotate(-30deg);
+		transform-origin: bottom left;
+	}
+
+	&:after {
+		right: 0;
+		transform: translateY(-100%) rotate(30deg);
+		transform-origin: bottom right;
+	}
+
+	&.btn-yellow {
+		background-color: $yellow;
+
+		i {
+			color: $white;
+		}
+
+		&:before,
+		&:after {
+			background-color: $purple-one;
+		}
+	}
+}

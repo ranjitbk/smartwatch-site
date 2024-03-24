@@ -1,3 +1,148 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site
 // -----------------------------------------------------------------------------
+.footer {
+	background-color: #593087;
+	position: relative;
+	z-index: 9;
+
+	.footer-top {
+		padding: 60px 0;
+		border-bottom: 2px solid $white;
+
+		@include media('>=tablet') {
+			padding: 4.1667vw 0;
+			border-width: 0.1389vw;
+		}
+	}
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-image: url(../images/footer-shape.png);
+		opacity: 0.05;
+		background-size: cover;
+		background-position: center;
+		z-index: -1;
+	}
+
+	.logo {
+		display: block;
+		width: 190px;
+		margin: 0 auto 35px;
+
+		@include media('>=tablet') {
+			width: 13.1944vw;
+			margin-bottom: 2.4306vw;
+		}
+	}
+
+	.footer-links {
+		margin: 0 -15px 35px;
+
+		@include media('>=tablet') {
+			margin: 0 -1.7361vw 2.4306vw;
+		}
+
+		li {
+			margin: 0 15px 15px;
+			position: relative;
+
+			@include media('>=tablet') {
+				margin: 0 1.7361vw 1.0417vw;
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 50%;
+				transform: translateY(-50%);
+				right: -17.5px;
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				background-color: $yellow;
+
+				@include media('>=tablet') {
+					width: 0.3472vw;
+					height: 0.3472vw;
+					right: -1.9097vw;
+				}
+			}
+
+			&:last-child {
+				&:before {
+					display: none;
+				}
+			}
+		}
+
+		a {
+			color: $white;
+			font-weight: 500;
+			text-transform: uppercase;
+
+			@include media('>=tablet') {
+				font-size: 1.25vw;
+			}
+
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
+
+	.social-links {
+		margin: 0 -15px;
+
+		@include media('>=tablet') {
+			margin: 0 -1.0417vw;
+		}
+
+		li {
+			margin: 0 15px;
+
+			@include media('>=tablet') {
+				margin: 0 1.0417vw;
+			}
+		}
+
+		a {
+			@include transition(background-color color);
+			width: 36px;
+			height: 36px;
+			background-color: #6F62B5;
+			border-radius: 50%;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			color: $white;
+			font-size: 16px;
+
+			@include media('>=tablet') {
+				width: 3.4722vw;
+				height: 3.4722vw;
+				font-size: 1.7361vw;
+			}
+
+			&:hover {
+				background-color: $yellow;
+				color: $white;
+			}
+		}
+	}
+
+
+	.copyright-block {
+		padding: 25px 0;
+
+		@include media('>=tablet') {
+			padding: 1.7361vw 0;
+		}
+	}
+}

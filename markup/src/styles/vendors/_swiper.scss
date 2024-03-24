@@ -9,3 +9,30 @@
 	box-sizing: border-box;
 }
 
+.swiper-pagination {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	.swiper-pagination-bullet {
+		@include transition(background-color width height border-color opacity);
+		width: 8px;
+		height: 8px;
+		margin: 0 4px;
+		border-radius: 50%;
+		cursor: pointer;
+		opacity: 0.35;
+		background-color: $yellow;
+
+		@include media(">=tablet") {
+			width: 0.8854vw;
+			height: 0.8854vw;
+			margin: 0 0.4427vw;
+		}
+
+		&.swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+	}
+}

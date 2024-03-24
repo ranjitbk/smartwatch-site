@@ -1,3 +1,151 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site
 // -----------------------------------------------------------------------------
+.header {
+	position: absolute;	
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+	padding: 10px 0;
+
+	@include media('>=tablet') {
+		padding: 1.8056vw 0;
+	}
+
+	.logo {
+		width: 190px;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media('>=tablet') {
+			width: 13.1944vw;
+		}
+	}
+
+}
+
+.menu {
+	li {
+		margin-bottom: 25px;
+
+		@include media('>=tablet') {
+			margin-bottom: 0;
+			margin-left: 1.7361vw;
+		}
+	}
+
+	a {
+		color: $white;
+		font-weight: 500;
+		font-size: 16px;
+
+		@include media('>=tablet') {
+			font-size: 1.1111vw;
+		}
+
+		&:hover {
+			color: $yellow;
+		}
+	}
+}
+.nav {
+	@include transition(transform opacity visibility);
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: #3E296C;
+	z-index: -1;
+	height: 100vh;
+	padding: 120px 20px;
+	transform: translateX(100%);
+	opacity: 0;
+	visibility: hidden;
+
+	@include media('>=tablet') {
+		position: static;
+		padding: 0;
+		transform: none;
+		height: auto;
+		opacity: 1;
+		visibility: visible;
+		z-index: 9;
+		background-color: transparent;
+	}
+
+	.nav-active & {
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+	}
+}
+
+.nav-opener {
+	width: 38px;
+	height: 30px;
+	display: block;
+	position: relative;
+	background-color: $yellow;
+
+	@include media(">=tablet") {
+		display: none;
+	}
+
+	&:before,
+	&:after,
+	span {
+		@include transition(transform opacity background-color margin);
+		content: "";
+		height: 3px;
+		width: 60%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		@include media(">=tablet") {
+			height: 3px;
+		}
+	}
+
+	&:before {
+		margin-top: -6px;
+		background-color: $white;
+
+		@include media(">=tablet") {
+			margin-top: -10px;
+		}
+	}
+
+	span {
+		background-color: $white;
+	}
+
+	&:after {
+		margin-top: 6px;
+		background-color: $white;
+
+		@include media(">=tablet") {
+			margin-top: 10px;
+		}
+	}
+
+	.nav-active & {
+		&:before {
+			margin: 0;
+			background-color: $white;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+
+		&:after {
+			margin: 0;
+			background-color: $white;
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+
+		span {
+			opacity: 0;
+		}
+	}
+}

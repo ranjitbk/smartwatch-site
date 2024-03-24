@@ -30,6 +30,12 @@ $media-expressions: (
 
 $white: #fff;
 $black: #000;
+$black-one: #0c1923;
+$white-one: #f5f5f5;
+$yellow: #FEAC01;
+$purple: #3C368C;
+$purple-one: #C065DE;
+$gray: #707070;
 
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
@@ -43,8 +49,8 @@ $yiq-text-light: $white;
 //
 // settings for the `<body>` element.
 
-$body-bg: $black;
-$body-color: $body-color;
+$body-bg: $white;
+$body-color: $black;
 
 $link-color: #0366d6;
 $link-decoration: none;
@@ -59,7 +65,7 @@ $rounded-circle: 50%;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: 'Inter', Arial, 'Noto Sans', sans-serif;
+$font-family-sans-serif: 'Poppins', Arial, 'Noto Sans', sans-serif;
 $font-family-sans-serif-secondary: $font-family-sans-serif;
 $font-family-base: $font-family-sans-serif;
 $base-font-path: '../fonts';
@@ -89,32 +95,32 @@ $font-sizes: (
   );
 
 $headings-sizes: (
-  "h1": 30px,
-  "h2": 20px,
-  "h3": 18px,
-  "h4": 14px,
-  "h5": 16px,
-  "h6": 12px,
+  "h1": 35px,
+  "h2": 30px,
+  "h3": 25px,
+  "h4": 20px,
+  "h5": 18px,
+  "h6": 16px,
   );
 
 $headings-sizes-max: (
-  "h1": 1.875vw, 
-  "h2": 1.3021vw, 
-  "h3": 0.9375vw, 
-  "h4": 0.8333vw, 
-  "h5": 0.7292vw, 
-  "h6": 0.7292vw, 
+  "h1": 3.125vw, 
+  "h2": 1.9792vw, 
+  "h3": 1.25vw, 
+  "h4": 1.0417vw, 
+  "h5": 0.9375vw, 
+  "h6": 0.8333vw, 
   );
 
 
-$headings-margin-bottom: 12px;
+$headings-margin-bottom: 20px;
 $headings-font-weight: inherit;
 $headings-line-height: 1.2;
 
 
 // Paragraphs
 
-$paragraph-margin-bottom: 20px;
+$paragraph-margin-bottom: 15px;
 
 // Base transition function
 $transition-duration-base: 0.35s;

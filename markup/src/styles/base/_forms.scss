@@ -10,6 +10,7 @@ input[type='tel'],
 input[type='password'] {
 	@include transition(border-color);
 	background-color: transparent;
+	width: 100%;
 
 
 	&:focus,
@@ -18,5 +19,3 @@ input[type='password'] {
 		outline: none;
 	}
 }
-
-
