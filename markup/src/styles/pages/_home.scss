@@ -83,6 +83,17 @@
 
 }
 
+@keyframes ripple-purple {
+	0% {
+		box-shadow: 0 0 0 0 rgba(112, 47, 198, 0.7), 0 0 0 10px rgba(112, 47, 198, 0.7), 0 0 0 20px rgba(112, 47, 198, 0.7);
+	}
+
+	100% {
+		box-shadow: 0 0 0 10px rgba(112, 47, 198, 0.7), 0 0 0 20px rgba(112, 47, 198, 0.7), 0 0 0 40px rgba(255, 69, 0, 0);
+	}
+
+}
+
 // @keyframes slide {
 // 	0% {
 // 		transform: translateX(0);
@@ -465,12 +476,41 @@
 .video-banner {
 	min-height: 200px;
 	margin-bottom: -100px;
+	position: relative;
+	z-index: 9;
+
 
 	@include media('>=tablet') {
 		min-height: 34.7222vw;
 		margin-bottom: -31.25vw;
 	}
 }
+
+.play-button {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	font-size: 35px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: $purple;
+	background-color: $white;
+	border-radius: 50%;
+	animation: ripple-purple 1s linear infinite;
+
+	@include media('>=tablet') {
+		width: 6.9444vw;
+		height: 6.9444vw;
+		font-size: 5.9028vw;
+	}
+}
+
+
 
 .testimonials {
 	.heading-block {

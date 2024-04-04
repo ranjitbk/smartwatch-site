@@ -100,6 +100,11 @@
     content: $icon-check; 
   }
 }
+.icon-star {
+  &:before {
+    content: $icon-star; 
+  }
+}
 .icon-computer-solid {
   &:before {
     content: $icon-computer-solid; 
@@ -170,14 +175,14 @@
     content: $icon-quote-left; 
   }
 }
-.icon-star {
-  &:before {
-    content: $icon-star; 
-  }
-}
 .icon-google-plus {
   &:before {
     content: $icon-google-plus; 
+  }
+}
+.icon-play {
+  &:before {
+    content: $icon-play; 
   }
 }
 
