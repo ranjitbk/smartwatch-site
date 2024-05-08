@@ -6,7 +6,6 @@
 
 ## Home
 
-![home]
 ![desktop](https://github.com/ranjitbk/smartwatch-site/assets/59703084/c136458b-d330-460f-9399-6a42c27fdfd5)
 
 
